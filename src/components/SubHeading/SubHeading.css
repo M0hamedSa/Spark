@@ -1,0 +1,8 @@
+.app__subheading{
+    margin-bottom: 1rem;
+}
+
+.p__cormorant{
+    border-bottom: 1px solid var(--color-golden);
+
+}

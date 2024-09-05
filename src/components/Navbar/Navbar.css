@@ -1,0 +1,103 @@
+.app__navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-black);
+    padding: 1rem 2rem ;
+}
+.app__navbar-logo{
+    font-weight: bolder;
+    color: var(--color-golden);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-top: 1px solid var(--color-golden);
+    border-bottom: 1px solid var(--color-golden);
+    border-radius: 17%;
+    font-size: 100px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.app__navbar-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+.app__navbar-links li{
+    color:var(--color-golden);
+    margin: 0 1rem;
+    cursor: pointer;
+}
+.app__navbar-links li :hover{
+    color: white;
+}
+
+.app__navbar-smallscreen{
+        display: none;
+    }
+    .app__navbar-smallscreen_overlay{
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100vh;
+background-color: var(--color-black);
+transition: 0.5s ease;
+
+flex-direction: column;
+z-index: 5;
+    }
+    .app__navbar-smallscreen_overlay .overlay__close{
+        font-size: 27px;
+        color: var(--color-golden);
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    .app__navbar-smallscreen-links{
+        list-style: none;
+        
+    }
+    .app__navbar-smallscreen-links li{
+        margin: 2rem;
+        cursor: pointer;
+        color: var(--color-golden);
+        font-size: 2rem;
+        text-align: center;
+        font-family: var(--font-base);
+    }
+    .app__navbar-smallscreen-links li:hover{
+        color:white;
+    }
+
+    
+@media screen  and (max-width: 2000px) {
+        .app__navbar-logo{
+            font-size: 75px;
+        }
+
+
+}
+@media screen  and (max-width: 900px) {
+    
+    .app__navbar-links{
+        display: none;
+    }
+    .app__navbar-smallscreen{
+        display: flex;
+    }
+
+}
+@media screen  and (max-width: 650px) {
+    .app__navbar{
+        padding: 1rem;
+    }
+    .app__navbar-login{
+        display: none;
+    }
+    .app__navbar-logo{
+        font-size: 40px;
+    }
+}
